@@ -1,5 +1,12 @@
-
-const renderJSX=(
+const Slider=props=>(
+<div>
+            <div className="features-slider_item">
+            <div className="features-img" style={{backgroundImage:'url(./images/'+props.file+')'}} />
+<div className="features-feature">{props.feature}</div>
+            </div>  
+</div>  
+);
+const App=(
 <div>
   <header>
     <div className="wrapper">
@@ -32,22 +39,10 @@ const renderJSX=(
         </div>
         <div className="features-slider">
           <div className="features-slider_items">
-            <div className="features-slider_item">
-              <div className="features-img" style={{backgroundImage: 'url(./images/1.svg)'}} />
-              <div className="features-feature">Первое целевое преимущество</div>
-            </div>
-            <div className="features-slider_item">
-              <div className="features-img" style={{backgroundImage: 'url(./images/2.svg)'}} />
-              <div className="features-feature">Второе целевое преимущество</div>
-            </div>
-            <div className="features-slider_item">
-              <div className="features-img" style={{backgroundImage: 'url(./images/3.svg)'}} />
-              <div className="features-feature">Третье целевое преимущество</div>
-            </div>
-            <div className="features-slider_item">
-              <div className="features-img" style={{backgroundImage: 'url(./images/4.svg)'}} />
-              <div className="features-feature">Четвертое целевое преимущество</div>
-            </div>
+            <Slider feature="Первое целевое преимущество" file="1.svg" />
+            <Slider feature="Второе целевое преимущество" file="2.svg" />
+            <Slider feature="Третье целевое преимущество" file="3.svg" />
+            <Slider feature="Четвертое целевое преимущество" file="4.svg" />
           </div>
           <button className="features-slider-arrow features-slider-prev">
             <svg width={9} height={16} xmlns="http://www.w3.org/2000/svg">
@@ -91,4 +86,4 @@ const renderJSX=(
 </div>
 
 );
-ReactDOM.render(renderJSX,document.getElementById("root"))
+ReactDOM.render(App,document.getElementById("root"))
