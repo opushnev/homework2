@@ -1,13 +1,14 @@
-import React from 'react';
+'use strict';
+import React, { StrictMode } from 'react';
 import './App.css';
 const Slider=props=>(
   <div>
               <div className="features-slider_item">
-              <div className="features-img" style={{backgroundImage:'url(./images/'+props.file+')'}} />
+              <div className="features-img" style={{backgroundImage:'url('+props.file+')'}} />
   <div className="features-feature">{props.feature}</div>
               </div>  
   </div>  
-  );
+);
 const App=()=> {
   return (
     <div>
